@@ -40,8 +40,34 @@ set visualbell
 set scrolloff=10
 
 
+" Inside _ideavimrc
+" My personal configuration
 
+set nu
 
+set tabstop=4
+
+" Don't make noise when error
+set visualbell
+
+set rnu
+
+colorscheme slate
+
+" Better than doing Esc to enter insert mode
+inoremap kj <Esc>
+
+" Easier to change tabs
+nnoremap <C-j> :tabprev<CR>
+nnoremap <C-k> :tabnext<CR>
+
+" Make space around cursor
+set scrolloff=10
+
+" _ideavimrc easymotion
+Plug 'easymotion/vim-easymotion'
+let mapleader=","
+set easymotion
 
 
 
