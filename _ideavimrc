@@ -1,0 +1,27 @@
+" My personal configuration
+
+set nu
+set rnu
+
+set tabstop=4
+
+" Don't make noise when error
+set visualbell
+
+colorscheme slate
+
+" Better than doing Esc to enter insert mode
+inoremap kj <Esc>
+
+" Easier to change tabs
+nnoremap <C-j> :tabprev<CR>
+nnoremap <C-k> :tabnext<CR>
+
+" Make space around cursor
+set scrolloff=10
+
+" _ideavimrc easymotion
+Plug 'easymotion/vim-easymotion'
+let mapleader="\"
+set easymotion
+map <Leader> <Plug>(easymotion-prefix)
