@@ -6,13 +6,13 @@ colorscheme torte
 colorscheme slate
 
 " Better than doing Esc to enter insert mode
-inoremap kj <Esc>
+inoremap jj <Esc>
 
 " Not sure if this is still relevant
 set clipboard=unnamedplus
 
 
-" Easier to change tabs
+" Easier to change tabs inside VIM not TMUX
 nnoremap <C-j> :tabprev<CR>
 nnoremap <C-k> :tabnext<CR>
 
