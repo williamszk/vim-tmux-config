@@ -1,0 +1,22 @@
+
+
+
+https://www.freecodecamp.org/news/how-to-fix-git-always-asking-for-user-credentials/
+
+update the URL of origin remote using SSH instead of HTTPS;
+
+git remote set-url origin git@github.com:username/repo.git
+
+git remote set-url origin git@github.com:williamszk/vim-tmux-config.git
+
+https://www.ssh.com/academy/ssh/keygen
+
+ssh-keygen
+
+
+
+
+
+
+
+
