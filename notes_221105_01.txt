@@ -1,6 +1,5 @@
 
 
-
 https://www.freecodecamp.org/news/how-to-fix-git-always-asking-for-user-credentials/
 
 update the URL of origin remote using SSH instead of HTTPS;
@@ -13,10 +12,9 @@ https://www.ssh.com/academy/ssh/keygen
 
 ssh-keygen
 
-
-
-
-
-
-
+this is a better and easier method
+we can try to git clone using the ssh
+then we need to create a key pair inside the container
+then we need to cat the public key and then
+we need to include it inside the github account
 

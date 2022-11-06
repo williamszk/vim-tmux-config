@@ -6,7 +6,7 @@ colorscheme torte
 colorscheme slate
 
 " Better than doing Esc to enter insert mode
-inoremap jj <Esc>
+inoremap kj <Esc>
 
 " Not sure if this is still relevant
 set clipboard=unnamedplus
