@@ -35,42 +35,16 @@ set expandtab
 " Don't make noise when error
 " Check if this is relevant in linux too
 set visualbell
+set belloff=all
 
 " Make space around cursor
 set scrolloff=10
 
-
-" Inside _ideavimrc
-" My personal configuration
-
-set nu
-
-set tabstop=4
-
-" Don't make noise when error
-set visualbell
-
-set rnu
-
-colorscheme slate
-
-" Better than doing Esc to enter insert mode
-inoremap kj <Esc>
-
-" Easier to change tabs
-nnoremap <C-j> :tabprev<CR>
-nnoremap <C-k> :tabnext<CR>
-
-" Make space around cursor
-set scrolloff=10
-
-" _ideavimrc easymotion
-Plug 'easymotion/vim-easymotion'
-let mapleader=","
-set easymotion
-
-
-
+" Use ctrl-[hjkl] to select the active split!
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
 
 
 

@@ -9,7 +9,6 @@
 apt update &&
 apt upgrade -y &&
 apt install git build-essential curl wget -y
-# apt install npm -y &&
 # npm install -g tree-sitter-cli
 
 curl -LO https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-linux64.deb
@@ -41,10 +40,12 @@ git clone git@github.com:williamszk/go_study.git
 
 # in the case of working with python
 # we can install the lsp:
+apt install npm -y &&
 nvim +LspInstall pyright
 
-
-
+# in the case of working with go
+# we need to include go here before install the lsp
+nvim +LspInstall gopls
 
 
 
