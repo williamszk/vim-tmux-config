@@ -1,17 +1,6 @@
 
 
-TMUX should be running on the host machine.
-
-
-
-
-
-
-
-
-
-
-
+tmux should be running on the host machine.
 
 
 
