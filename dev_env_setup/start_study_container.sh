@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# To start a new container for study and devlepment 
+# just run this script
+# source start_study_container.sh
+
 docker run -d \
     --name study-container \
     -p 3000:3000 \

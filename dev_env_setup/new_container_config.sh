@@ -11,7 +11,10 @@ apt upgrade -y &&
 apt install git build-essential curl wget unzip vim -y
 
 apt install npm -y &&
-npm install -g nodemon
+npm install -g nodemon &&
+npm install -g n &&
+n stable
+
 
 curl -LO https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-linux64.deb &&
 dpkg -i nvim-linux64.deb &&
