@@ -14,7 +14,7 @@ apt install npm -y &&
 npm install -g nodemon &&
 npm install -g n &&
 n stable
-
+apt install lua5.4 -y
 
 curl -LO https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-linux64.deb &&
 dpkg -i nvim-linux64.deb &&
@@ -31,6 +31,7 @@ echo 'vim.cmd([[ inoremap kj <Esc> ]])' >> ~/.config/nvim/init.lua
 
 git config --global user.email "wllmszk@gmail.com" &&
 git config --global user.name "williamszk" &&
+git config pull.rebase false
 
 # docker cp ~/.ssh/id_rsa study-container:/root/.ssh/id_rsa &&
 # docker exec -it study-container bash
@@ -41,6 +42,11 @@ git clone git@github.com:williamszk/webdev_study.git /root/webdev_study
 if [ $1 = "default" ]
 then
     # ======================================================================================= #
+    # Linters in general:
+    # codespell # check english spelling errors
+
+
+    # ======================================================================================= #
     # Working with Python.
     # We can install the LSP:
     # apt install npm -y &&
@@ -48,6 +54,16 @@ then
 
     # ======================================================================================= #
     # Working with JavaScript
+
+    # not sure if it is necessary, need to confirm
+    npm install -g typescript typescript-language-server
+    # LspInstall typescript-language-server
+    
+
+    # ======================================================================================= #
+    # Working with Python 
+    apt install python3-venv -y
+    # LspInstall pyright
 
     # ======================================================================================= #
     # Working with Go
