@@ -45,7 +45,6 @@ then
     # Linters in general:
     # codespell # check english spelling errors
 
-
     # ======================================================================================= #
     # Working with Python.
     # We can install the LSP:
@@ -76,6 +75,10 @@ then
     # Check if Go is installed and in the path:
     echo go version
     # nvim +LspInstall gopls
+
+    # ======================================================================================= #
+    # Working with Ruby
+    apt install ruby-full
 fi
 
 if [ $1 = "kotlin" ]
