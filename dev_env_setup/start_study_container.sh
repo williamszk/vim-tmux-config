@@ -7,6 +7,7 @@
 docker run -d \
     --name study-container \
     -p 3000:3000 \
+    -p 8888:8888 \
     -it ubuntu bash &&
 
 docker exec study-container mkdir /root/.ssh &&

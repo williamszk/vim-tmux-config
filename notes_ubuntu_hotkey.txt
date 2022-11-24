@@ -1,0 +1,37 @@
+
+
+How to make capslock behave like esc when tapped and ctrl when pressed?
+
+# ============================================= #
+# This didn't work...
+https://askubuntu.com/a/856887/1020380
+# Install xcape
+sudo apt-get install xcape
+# Add the two lines in your ~/.profile
+/usr/bin/setxkbmap -option 'caps:ctrl_modifier'
+/usr/bin/xcape -e 'Caps_Lock=Escape' -t 100
+# Notice the part -t 100, if you don't set it, you may notice a delay in Esc if you use vim.
+# ============================================= #
+# There is a problem with ubuntu 22.04 and xcape
+# https://askubuntu.com/a/1407206/1020380
+
+# https://diolinux.com.br/gnome/gnome-tweak-tool-gnome-tweaks-no-ubuntu.html
+# we can do the same using gnome tweaks
+sudo apt install gnome-tweaks
+
+# Stay on Wayland and achieve an effect that comes rather close to what you had with xcape: 
+# in Gnome Tweaks, head to the "Keyboard & Mouse" tab. In "Additional layout options", 
+# there is an option to make CapsLock an additional Ctrl. 
+# You then only loose the possibility to use that key stand alone as Esc.
+
+# Let's try this one too
+# https://askubuntu.com/a/1220553/1020380
+# Don't use xmodmap. It's a trap!
+# Install xcape
+# Use gnome-tweaks to turn capslock into control
+# Use xcape -d to verify that capslock is key 66
+# Set xcape -e '#66=Escape' in Startup Applications or ~/.profile
+
+
+
+
