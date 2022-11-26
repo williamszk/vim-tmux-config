@@ -29,6 +29,10 @@ echo 'vim.opt.shell="/bin/bash"' >> ~/.config/nvim/init.lua
 echo 'vim.cmd([[ set mouse= ]])' >> ~/.config/nvim/init.lua
 # echo 'vim.cmd([[ inoremap kj <Esc> ]])' >> ~/.config/nvim/init.lua
 
+# Create alias for some commands
+echo 'alias c="clear"' >> ~/.bashrc
+echo 'alias gits="git status"' >> ~/.bashrc
+
 git config --global user.email "wllmszk@gmail.com" &&
 git config --global user.name "williamszk" &&
 git config pull.rebase false
@@ -80,6 +84,8 @@ then
     # Working with Ruby
     apt install ruby-full
 fi
+
+
 
 if [ $1 = "kotlin" ]
 then
