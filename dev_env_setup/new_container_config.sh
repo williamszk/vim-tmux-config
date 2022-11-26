@@ -27,7 +27,7 @@ git clone https://github.com/AstroNvim/AstroNvim.git ~/.config/nvim/
 # use bash instead of sh as the default terminal
 echo 'vim.opt.shell="/bin/bash"' >> ~/.config/nvim/init.lua
 echo 'vim.cmd([[ set mouse= ]])' >> ~/.config/nvim/init.lua
-echo 'vim.cmd([[ inoremap kj <Esc> ]])' >> ~/.config/nvim/init.lua
+# echo 'vim.cmd([[ inoremap kj <Esc> ]])' >> ~/.config/nvim/init.lua
 
 git config --global user.email "wllmszk@gmail.com" &&
 git config --global user.name "williamszk" &&
