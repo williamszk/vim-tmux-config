@@ -61,7 +61,6 @@ then
     # not sure if it is necessary, need to confirm
     npm install -g typescript typescript-language-server
     # LspInstall typescript-language-server
-    
 
     # ======================================================================================= #
     # Working with Python 
@@ -83,6 +82,15 @@ then
     # ======================================================================================= #
     # Working with Ruby
     apt install ruby-full
+
+    # ======================================================================================= #
+    curl -LO https://corretto.aws/downloads/latest/amazon-corretto-17-x64-linux-jdk.tar.gz
+    tar -C /usr/local -xzf amazon-corretto-17-x64-linux-jdk.tar.gz
+    echo "export JAVA_HOME=/usr/local/amazon-corretto-17.0.5.8.1-linux-x64" >> ~/.bashrc
+    source .bashrc 
+    echo "export PATH=$PATH:$JAVA_HOME/bin" >> ~/.bashrc
+    source .bashrc
+    java --version
 fi
 
 
