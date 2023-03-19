@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Here are some notes about setting up a docker container for development
-# The notes are based on astro vim
-
-# here is a page for basic usage of astro vim
-# https://astronvim.github.io/Basic%20Usage/walkthrough
-
 apt update &&
 apt upgrade -y &&
 apt install git build-essential curl wget unzip vim -y
@@ -20,17 +14,17 @@ curl -LO https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-linux64.
 dpkg -i nvim-linux64.deb &&
 rm nvim-linux64.deb
 
-git clone https://github.com/AstroNvim/AstroNvim.git ~/.config/nvim/
+git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
+# git clone https://github.com/AstroNvim/AstroNvim.git ~/.config/nvim/
 # nvim +PackerSync
 # nvim +TSUpdate
 # add option to init.lua
 # use bash instead of sh as the default terminal
-echo 'vim.opt.shell="/bin/bash"' >> ~/.config/nvim/init.lua
-echo 'vim.cmd([[ set mouse= ]])' >> ~/.config/nvim/init.lua
+# echo 'vim.opt.shell="/bin/bash"' >> ~/.config/nvim/init.lua
+# echo 'vim.cmd([[ set mouse= ]])' >> ~/.config/nvim/init.lua
 # echo 'vim.cmd([[ inoremap kj <Esc> ]])' >> ~/.config/nvim/init.lua
 
 # Create alias for some commands
-echo 'alias c="clear"' >> ~/.bashrc
 echo 'alias gits="git status"' >> ~/.bashrc
 
 git config --global user.email "wllmszk@gmail.com" &&
@@ -42,6 +36,7 @@ git config pull.rebase false
 git clone git@github.com:williamszk/go_study.git /root/go_study
 git clone git@github.com:williamszk/statistical-learning.git /root/statistical-learning
 git clone git@github.com:williamszk/webdev_study.git /root/webdev_study
+git clone git@github.com:williamszk/rust-study.git /root/rust-study
 
 if [ $1 = "default" ]
 then
