@@ -54,7 +54,12 @@ then
     # We can install the LSP:
     # apt install npm -y &&
     # nvim +LspInstall pyright
-
+    
+    # ======================================================================================= #
+    # Working with Rust
+    curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh
+    source $HOME/.cargo/env
+    
     # ======================================================================================= #
     # Working with JavaScript
 
@@ -92,51 +97,4 @@ then
     source .bashrc
     java --version
 fi
-
-
-
-if [ $1 = "kotlin" ]
-then
-    # ======================================================================================= #
-    # Working with Kotlin
-    # I need to install a JDK
-    # do this inside the ~/ directory
-    curl -LO https://corretto.aws/downloads/latest/amazon-corretto-17-x64-linux-jdk.tar.gz &&
-    tar -C /usr/local -xzf amazon-corretto-17-x64-linux-jdk.tar.gz &&
-    rm amazon-corretto-17-x64-linux-jdk.tar.gz &&
-    echo "export JAVA_HOME=/usr/local/amazon-corretto-17.0.5.8.1-linux-x64" >> ~/.bashrc &&
-    source .bashrc &&
-    echo "export PATH=$PATH:$JAVA_HOME/bin" >> ~/.bashrc &&
-    source .bashrc
-    # check if java is installed:
-    java --version
-
-    # to install the kotlinc compiler
-    # I'm looking to use kotlinc-jvm
-    curl -LO https://github.com/JetBrains/kotlin/releases/download/v1.7.21/kotlin-compiler-1.7.21.zip &&
-    mkdir /usr/local/kotlin-compiler-1.7.21 &&
-    unzip -d /usr/local/kotlin-compiler-1.7.21 kotlin-compiler-1.7.21.zip &&
-    rm kotlin-compiler-1.7.21.zip &&
-    source .bashrc
-    # create KOTLIN_PATH
-    echo "export KOTLIN_PATH=/usr/local/kotlin-compiler-1.7.21/kotlinc" >> ~/.bashrc &&
-    source .bashrc &&
-    echo "export PATH=$PATH:$KOTLIN_PATH/bin" >> ~/.bashrc &&
-    source .bashrc
-    kotlinc-jvm -version
-
-    # and then install the LSP for Kotlin
-    # the LSP for Kotlin doesn't need the JDK
-    # nvim +LspInstall kotlin
-    # nvim +LspInstall kotlin_language_server
-    # nvim +TSInstall kotlin
-    # How do we compile a kotlin code then?
-fi
-
-
-
-
-
-
-
 
