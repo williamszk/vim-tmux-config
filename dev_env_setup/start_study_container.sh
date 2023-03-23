@@ -4,6 +4,18 @@
 # just run this script
 # source start_study_container.sh
 
+
+docker run -d \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    --name william-dev-container \
+    -it ubuntu bash
+
+docker stop william-dev-container
+docker rm william-dev-container
+
+
+
+
 docker run -d \
     --name study-container \
     -p 3000:3000 \

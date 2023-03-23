@@ -20,7 +20,7 @@ git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
 # nvim +TSUpdate
 # add option to init.lua
 # use bash instead of sh as the default terminal
-# echo 'vim.opt.shell="/bin/bash"' >> ~/.config/nvim/init.lua
+echo 'vim.opt.shell="/bin/bash"' >> ~/.config/nvim/init.lua
 # echo 'vim.cmd([[ set mouse= ]])' >> ~/.config/nvim/init.lua
 # echo 'vim.cmd([[ inoremap kj <Esc> ]])' >> ~/.config/nvim/init.lua
 
