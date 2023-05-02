@@ -36,7 +36,7 @@ git config pull.rebase false
 git clone git@github.com:williamszk/go_study.git /root/go_study
 git clone git@github.com:williamszk/statistical-learning.git /root/statistical-learning
 git clone git@github.com:williamszk/webdev_study.git /root/webdev_study
-git clone git@github.com:williamszk/rust-study.git /root/rust-study
+
 
 if [ $1 = "default" ]
 then
