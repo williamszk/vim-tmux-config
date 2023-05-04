@@ -36,34 +36,6 @@ git config --global user.email "wllmszk@gmail.com"
 git config --global user.name "williamszk"
 git config pull.rebase false
 
-
-# ================================================================================ 
-# Install stuff for neovim
-suod apt-get install lua5.4 -y
-
-sudo curl -LO https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-linux64.deb &&
-sudo dpkg -i nvim-linux64.deb &&
-rm nvim-linux64.deb
-
-rm -rf ~/.config/nvim
-# git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
-git clone https://github.com/AstroNvim/AstroNvim.git ~/.config/nvim/
-nvim +PackerSync
-nvim +TSUpdate
-# add option to init.lua
-# use bash instead of sh as the default terminal
-echo 'vim.opt.shell="/bin/bash"' >> ~/.config/nvim/init.lua
-# echo 'vim.cmd([[ set mouse= ]])' >> ~/.config/nvim/init.lua
-# echo 'vim.cmd([[ inoremap kj <Esc> ]])' >> ~/.config/nvim/init.lua
-
-# Create alias for some commands
-echo 'alias gits="git status"' >> ~/.bashrc
-
-# ================================================================================ 
-# about tmux pane config
-touch ~/.tmux.conf
-echo 'set-option -g pane-base-index 1' >> ~/.tmux.conf
-
 # ================================================================================ 
 # install node
 sudo apt install npm -y
@@ -106,5 +78,36 @@ git clone https://github.com/williamszk/rust-study
 
 
 
+# ================================================================================ 
+# in repo
+git config user.email "wllmszk@gmail.com"
+git config user.name "williamszk"
 
 
+
+# ================================================================================ 
+# Install stuff for neovim
+suod apt-get install lua5.4 -y
+
+sudo curl -LO https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-linux64.deb &&
+sudo dpkg -i nvim-linux64.deb &&
+rm nvim-linux64.deb
+
+rm -rf ~/.config/nvim
+# git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
+git clone https://github.com/AstroNvim/AstroNvim.git ~/.config/nvim/
+nvim +PackerSync
+nvim +TSUpdate
+# add option to init.lua
+# use bash instead of sh as the default terminal
+echo 'vim.opt.shell="/bin/bash"' >> ~/.config/nvim/init.lua
+# echo 'vim.cmd([[ set mouse= ]])' >> ~/.config/nvim/init.lua
+# echo 'vim.cmd([[ inoremap kj <Esc> ]])' >> ~/.config/nvim/init.lua
+
+# Create alias for some commands
+echo 'alias gits="git status"' >> ~/.bashrc
+
+# ================================================================================ 
+# about tmux pane config
+touch ~/.tmux.conf
+echo 'set-option -g pane-base-index 1' >> ~/.tmux.conf
