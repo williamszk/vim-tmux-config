@@ -70,6 +70,7 @@ sudo apt install npm -y
 sudo npm install -g nodemon
 sudo npm install -g n
 sudo npm install -g tsc ts-node
+npm install -g typescript
 sudo n stable
 
 # ================================================================================ 
