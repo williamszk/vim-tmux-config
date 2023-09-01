@@ -1,4 +1,6 @@
 " My personal configuration
+" Where this file should be in windows? %HOMEPATH\._ideavimrc%
+" Where this file should be in linux? $HOME/_ideavimrc
 
 set nu
 set rnu
@@ -10,18 +12,21 @@ set visualbell
 
 colorscheme slate
 
-" Better than doing Esc to enter insert mode
+" Better than doing Esc to exit insert mode
 inoremap kj <Esc>
 
-" Easier to change tabs
-nnoremap <C-j> :tabprev<CR>
-nnoremap <C-k> :tabnext<CR>
 
 " Make space around cursor
 set scrolloff=10
 
 " _ideavimrc easymotion
 Plug 'easymotion/vim-easymotion'
-let mapleader="\"
+
+" Make leader be space instead of "\"
+let mapleader=" "
+
 set easymotion
 map <Leader> <Plug>(easymotion-prefix)
+
+" instead of V to select whole line we do <leader>+v
+nnoremap <Leader>v V
